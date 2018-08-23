@@ -39,7 +39,7 @@ public class ContextConfig {
         if (entityName == null) {
             entityName = bizEnBigName;
         }
-        modelPackageName = proPackage + "." + "modular.system.model";
+        modelPackageName = proPackage + "." + "modular." + moduleName + ".model";
         modelMapperPackageName = proPackage + "." + "modular.system.dao";
     }
 

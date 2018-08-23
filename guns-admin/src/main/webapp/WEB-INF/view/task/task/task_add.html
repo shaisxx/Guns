@@ -1,0 +1,36 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" underline="true"/>
+                            <#input id="uuid" name="" underline="true"/>
+                            <#input id="courseTrainingId" name="课程实训管理表ID" underline="true"/>
+                            <#input id="title" name="实训任务名称" underline="true"/>
+                            <#input id="taskDesc" name="实训任务说明" underline="true"/>
+                            <#input id="taskStatus" name="任务状态：0-已创建未启动；1进行中；2-已挂起；3-已结束；11-正在启动中；12-正在挂起中；13-正在结束中"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="logicDelete" name="0-未删除 1-已删除(页面不可见)" underline="true"/>
+                            <#input id="createUserId" name="创建者主键编号" underline="true"/>
+                            <#input id="createDate" name="创建时间" underline="true"/>
+                            <#input id="modifyUserId" name="修改者主键编号" underline="true"/>
+                            <#input id="modifyDate" name="修改时间" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TaskInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TaskInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/task/task/task_info.js"></script>
+@}
